@@ -3,21 +3,20 @@ import java.util.Scanner;
 
 public class GuessinggameClass {
     public static void main(String[] args) {
-        int secretNumber = 6;
+
         int getDate;
         System.out.println("Enter a Number:");
         Scanner keyboard = new Scanner(System.in);
+        getDate = keyboard.nextInt();
         Random rand = new Random();
-        int newRand = rand.nextInt(10);
+        int newRand =1+ rand.nextInt(10);
 
-        while (newRand >=0 && newRand <10) {
+        while (getDate != newRand) {
 
+            System.out.println("The number is incorrect");
             getDate = keyboard.nextInt();
-           if (getDate == secretNumber )
-               System.out.println("Congratulations you won!");
-            else
-              System.out.println("Wrong Number");
 
         }
+        System.out.println("The number is correct");
     }
 }
